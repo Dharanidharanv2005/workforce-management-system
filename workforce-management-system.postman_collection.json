@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "bb57ebf1-6488-4348-ba7a-321d7b212e52",
+		"name": "workforce-management-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50708327",
+		"_collection_link": "https://dharanidharanvenugopal123-8959097.postman.co/workspace/backend~6ec63ae8-22f8-41b7-9959-bad87ca958a3/collection/50708327-bb57ebf1-6488-4348-ba7a-321d7b212e52?action=share&source=collection_link&creator=50708327"
+	},
+	"item": [
+		{
+			"name": "Clock In API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"workerId\": 1,\r\n  \"siteId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/attendance/clock-in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"attendance",
+						"clock-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Active Workers API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/attendance/active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"attendance",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clock out API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2MTI2OTE0LCJpYXQiOjE3NjYxMjMzMTQsImp0aSI6ImZlZDg3MDZmYjRjZTQyODM4MjBlMTMxY2UyN2QyODJjIiwidXNlcl9pZCI6IjIifQ.r-S7IbEmjTINEnoNOUcZJjIOPo1Jk5qZvrN_-cWFggQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"workerId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/attendance/clock-out",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"attendance",
+						"clock-out"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
